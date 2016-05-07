@@ -45,7 +45,7 @@ func page_not_found(rw http.ResponseWriter, r *http.Request){
 }
 
 func main() {
-	beego.Errorhandler("404",page_not_found)
+	beego.ErrorHandler("404",page_not_found)
 	beego.Router("/", &controllers.MainController{})
 	beego.Run()
 }
